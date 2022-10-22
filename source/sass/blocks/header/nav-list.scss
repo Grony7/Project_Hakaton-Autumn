@@ -13,9 +13,8 @@
   padding-top: 11px;
   padding-bottom: 11px;
   margin-left: auto;
-  font-size: 14px;
-  line-height: 20px;
   text-align: center;
+  text-transform: uppercase;
   font-weight: 700;
   font-size: 20px;
   line-height: 25px;
@@ -30,10 +29,9 @@
 
 .nav-list__item:last-child {
   .nav-list__button {
-    border-radius: 0px 0px 12px 12px;
+    border-radius: 0 0 12px 12px;
   }
 }
-
 
 @media (min-width: f.$tablet-width) {
   .nav-list {
@@ -55,7 +53,7 @@
     display: inline;
     width: auto;
     background-color: transparent;
-    border-bottom: none
+    border-bottom: none;
   }
 
   .nav-list__item:last-child {
