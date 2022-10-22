@@ -9,7 +9,8 @@
   border-radius: 6px;
 
   &--message {
-    resize: none
+    resize: none;
+    min-height: 300px;
   }
 
   &--image {
