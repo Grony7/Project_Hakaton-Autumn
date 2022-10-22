@@ -5,4 +5,5 @@ navMain.classList.remove('main-nav--nojs');
 
 navToggle.onclick = () => {
     navMain.classList.toggle('main-nav--opened');
+    navMain.classList.toggle('main-nav--closed');
 };
