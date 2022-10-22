@@ -3,9 +3,17 @@
 .new-post {
   width: f.$desktop-width;
   display: flex;
+  padding: 30px;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: f.$color-background-first;
+}
+
+.new-post__form {
+  width: 100%;
 }
 
 .new-post__list {
