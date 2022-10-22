@@ -1,0 +1,23 @@
+@use "./common/forwarded.scss" as f;
+
+.new-post {
+  width: f.$desktop-width;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.new-post__list {
+  @include f.list-reset();
+}
+
+.new-post__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-post__label {
+  margin: 0;
+  padding: 5px;
+}
