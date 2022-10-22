@@ -9,6 +9,9 @@
   @include f.link-reset;
   width: 100vw;
   display: block;
+  min-height: 48px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   margin-left: auto;
   font-size: 14px;
   line-height: 20px;
@@ -18,6 +21,7 @@
   line-height: 25px;
   background-color: f.$color-background-second;
   border-bottom: 1px solid f.$color-text-first;
+  box-sizing: border-box;
 
   &--enter {
     text-decoration: underline 1px solid f.$color-text-first;
