@@ -1,0 +1,11 @@
+@use "./common/forwarded.scss" as f;
+
+.admin_body {
+  background-color: #ebebeb;
+}
+
+.admin-button {
+  padding: 8px 16px;
+  background-color: f.$color-background-first;
+  border-radius: 8px;
+}
