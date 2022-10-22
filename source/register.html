@@ -45,10 +45,13 @@
 </header>
 
 <main class="page__login login">
-  <h1 class="login__title">Вход</h1>
-  <a class="login__link" href="register.html">Зарегистрироваться</a>
+  <h1 class="login__title">Регистрация</h1>
+  <a class="login__link" href="login.html">Вход</a>
 
-  <form class="login__form form" action="#" method="post" name="form-login">
+  <form class="login__form form" action="#" method="post">
+    <label class="form__label" for="field-name">ФИО</label>
+    <input class="form__field" id="field-name" type="email" name="field-name" placeholder="Иванов Иван Иванович"
+           autocomplete="off" required>
 
     <label class="form__label" for="field-email">Почта</label>
     <input class="form__field" id="field-email" type="email" name="field-email" placeholder="example@elpmaxe.com"
@@ -58,7 +61,32 @@
     <input class="form__field" id="field-pass" type="password" name="field-pass" placeholder="********"
            autocomplete="off" required>
 
-    <button class="form__button button" type="submit">Войти</button>
+    <label class="form__label" for="field-pass-repeat">Повторите пароль</label>
+    <input class="form__field" id="field-pass-repeat" type="password" name="field-pass-repeat" placeholder="********"
+           autocomplete="off" required>
+
+    <fieldset class="form__group form__group--type">
+      <legend class="form__name form__name--type">Кто вы?</legend>
+      <ul class="form__list">
+        <li class="form__item">
+          <label class="form__control form__control--radio control">
+            <input class="control__input visually-hidden" type="radio" name="product-group" value="student"
+                   checked>
+            <span class="control__mark control__mark--radio"></span>
+            Студент
+          </label>
+        </li>
+        <li class="form__item">
+          <label class="form__control form__control--radio control">
+            <input class="control__input visually-hidden" type="radio" name="product-group" value="common-user">
+            <span class="control__mark control__mark--radio"></span>
+            Пользователь
+          </label>
+        </li>
+      </ul>
+    </fieldset>
+
+    <button class="form__button button" type="submit">Создать</button>
   </form>
 </main>
 

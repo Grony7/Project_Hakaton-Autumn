@@ -11,4 +11,8 @@
   line-height: 28px;
   background-color: #ffffff;
   color: f.$color-text-second;
+
+  @media (min-width: f.$tablet-width) {
+    padding: 69px 30px 60px;
+  }
 }

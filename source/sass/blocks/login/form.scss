@@ -4,10 +4,15 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  width: 100%;
   min-width: 320px;
   padding: 20px 30px 32px;
   border-radius: 15px;
   background-color: f.$color-background-second;
+
+  @media (min-width: f.$tablet-width) {
+    max-width: 980px;
+  }
 }
 
 .form__label {
@@ -19,9 +24,11 @@
 
 .form__field {
   box-sizing: border-box;
-  margin: 0 0 20px;
+  margin: 0 auto 20px;
   padding: 18px;
-  width: 260px;
+  width: 100%;
+  min-width: 260px;
+  max-width: 650px;
   height: 58px;
   border-radius: 8px;
   border: none;
@@ -34,8 +41,45 @@
   opacity: 50%;
 }
 
+.form__group {
+  box-sizing: border-box;
+  border: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 650px;
+}
+
+.form__name {
+  margin: 0 auto 12px;
+}
+
+.form__list {
+  list-style-type: none;
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+.form__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 42px;
+  margin-bottom: 12px;
+}
+
+.form__item:not(:last-child) {
+  margin-bottom: 21px;
+}
+
+.form__control {
+  padding-left: 60px;
+  color: #ffffff;
+}
+
 .form__button {
   margin: 6px auto 0;
   width: 240px;
   height: 56px;
 }
+
