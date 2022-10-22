@@ -3,6 +3,7 @@
 .page__login {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   align-items: center;
   min-width: 320px;
   padding: 69px 0 60px;
