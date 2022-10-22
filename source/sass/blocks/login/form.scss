@@ -1,0 +1,41 @@
+@use "../../common/forwarded.scss" as f;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-width: 320px;
+  padding: 20px 30px 32px;
+  border-radius: 15px;
+  background-color: f.$color-background-second;
+}
+
+.form__label {
+  width: 240px;
+  margin: 0 auto 12px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.form__field {
+  box-sizing: border-box;
+  margin: 0 0 20px;
+  padding: 18px;
+  width: 260px;
+  height: 58px;
+  border-radius: 8px;
+  border: none;
+}
+
+.form__field::placeholder {
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  opacity: 50%;
+}
+
+.form__button {
+  margin: 0 auto;
+  width: 240px;
+  height: 56px;
+}

@@ -1,0 +1,17 @@
+@use "../../common/forwarded.scss" as f;
+
+.login__title {
+  margin: 0;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.login__link {
+  margin: 0 0 7px;
+  padding: 15px 0;
+  width: 180px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+  color: inherit;
+}
