@@ -1,0 +1,51 @@
+@use "common/forwarded.scss" as f;
+
+.contact-list {
+  @include f.list-reset();
+  width: 100%;
+}
+
+.contact-list__item {
+  &:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  &:last-child {
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid f.$color-text-first;
+  }
+}
+
+.contact-list__link {
+  @include f.link-reset;
+  display: flex;
+  flex-direction: row-reverse;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: f.$color-background-first;
+  color: f.$color-text-second;
+  padding: 12px;
+  border-radius: inherit;
+}
+
+.contact-list__link-text {
+  margin-right: auto;
+}
+
+.contact-list__icon {
+  margin-left: auto;
+
+  &--phone-icon {
+    margin-right: 14px;
+  }
+
+  &--mail-icon {
+    margin-right: 10px;
+  }
+}
