@@ -157,7 +157,7 @@ export default gulp.series(
   copy,
   copyImages,
   gulp.parallel(
-    // styles,
+    styles,
     html,
     scripts,
     svg,

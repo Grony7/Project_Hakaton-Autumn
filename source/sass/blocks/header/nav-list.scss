@@ -1,0 +1,68 @@
+@use "common/forwarded.scss" as f;
+
+.nav-list {
+  @include f.list-reset;
+  margin: 0;
+}
+
+.nav-list__button {
+  @include f.link-reset;
+  width: 100vw;
+  display: block;
+  margin-left: auto;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  background-color: f.$color-background-second;
+  border-bottom: 1px solid f.$color-text-first;
+
+  &--enter {
+    text-decoration: underline 1px solid f.$color-text-first;
+  }
+}
+
+.nav-list__item:last-child {
+  .nav-list__button {
+    border-radius: 0px 0px 12px 12px;
+  }
+}
+
+
+@media (min-width: f.$tablet-width) {
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px
+  }
+
+  .nav-list__item {
+    margin-bottom: 0;
+
+    &--right {
+      margin-left: auto;
+    }
+  }
+
+  .nav-list__button {
+    display: inline;
+    width: auto;
+    background-color: transparent;
+    border-bottom: none
+  }
+
+  .nav-list__item:last-child {
+    .nav-list__button {
+      border-radius: 0;
+    }
+  }
+}
+
+@media (min-width: f.$desktop-width) {
+  .nav-list {
+    gap: 60px
+  }
+}

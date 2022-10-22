@@ -1,0 +1,10 @@
+@use "global.scss";
+
+// Header
+@use "./blocks/header/main-header.scss";
+@use "./blocks/header/main-nav.scss";
+@use "./blocks/header/nav-list.scss";
+
+//Footer
+@use "./blocks/footer/main-footer.scss";
+@use "./blocks/footer/contact-list.scss";

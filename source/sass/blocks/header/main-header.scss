@@ -1,0 +1,63 @@
+@use "common/forwarded.scss" as f;
+
+.main-header {
+  background-color: f.$color-background-second;
+}
+
+.main-header__wrapper {
+  position: relative;
+  width: 100%;
+  padding: 0 22px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid f.$color-text-first;
+  box-sizing: border-box;
+}
+
+.main-header__logo {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-header__logo-image {
+  display: block;
+}
+
+@media (min-width: f.$tablet-width) {
+  .main-header {
+    background-color: transparent;
+    display: flex;
+  }
+
+  .main-header__wrapper {
+    padding: 22px 40px;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: none;
+  }
+
+  .main-header__logo {
+    margin: 0;
+    margin-right: 30px;
+  }
+
+  .main-header__logo-image {
+    width: 62px;
+    height: 62px;
+  }
+}
+
+@media (min-width: f.$desktop-width) {
+  .main-header__wrapper {
+    max-width: f.$desktop-width;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
+  .main-header__logo {
+    margin: 0;
+    margin-right: 68px;
+  }
+}
