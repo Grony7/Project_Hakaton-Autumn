@@ -1,0 +1,10 @@
+@use "./common/forwarded.scss" as f;
+
+.news {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 35px;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
