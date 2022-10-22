@@ -1,4 +1,4 @@
-@use "common/forwarded.scss" as f;
+@use "./common/forwarded.scss" as f;
 
 .page {
   height: 100%;
@@ -22,4 +22,17 @@
 
 .visually-hidden {
   @include f.visually-hidden;
+}
+
+.button {
+  display: block;
+  padding: 8px 34px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  color: f.$color-text-second;
+  background-color: f.$color-accent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
