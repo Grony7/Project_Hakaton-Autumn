@@ -1,0 +1,66 @@
+@use "common/forwarded.scss" as f;
+
+.title {
+  padding: 40px 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box
+}
+
+.title__wrapper {
+  min-height: 300px;
+  padding: 80px 20px 30px;
+  background-color: f.$color-accent;
+  background-image: url("../img/background/title-background.jpg");
+  background-repeat: no-repeat;
+  background-position: 30% 0;
+  background-size: auto 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+.title__text {
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  color: f.$color-background-first;
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (min-width: f.$tablet-width) {
+  .title {
+    padding: 55px 40px;
+    margin-bottom: 10px;
+  }
+
+  .title__wrapper {
+    min-height: 550px;
+    padding: 175px 80px 40px;
+    background-size: auto 650px;
+  }
+
+  .title__text {
+    font-size: 48px;
+    line-height: 59px;
+  }
+}
+
+@media (min-width: f.$desktop-width) {
+  .title {
+    max-width: f.$desktop-width;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
+  .title__wrapper {
+    padding-left: 180px;
+    padding-right: 180px;
+    background-size: 980px 550px;
+  }
+}

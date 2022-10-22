@@ -5,6 +5,10 @@
 @use "./blocks/header/main-nav.scss";
 @use "./blocks/header/nav-list.scss";
 
+// Main
+
+@use "./blocks/main/title.scss";
+
 //Footer
 @use "./blocks/footer/main-footer.scss";
 @use "./blocks/footer/contact-list.scss";
