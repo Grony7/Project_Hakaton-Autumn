@@ -7,7 +7,7 @@ import (
 )
 
 func index(w http.ResponseWriter, r *http.Request) {
-	temp, err := template.ParseFiles("./Project_Hakaton-Autumn/source/index.html")
+	temp, err := template.ParseFiles("./templates/index.html")
 	if err != nil {
 		log.Fatal(err)
 	}
