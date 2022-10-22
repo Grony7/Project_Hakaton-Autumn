@@ -58,11 +58,11 @@
            autocomplete="off" required>
 
     <label class="form__label" for="field-pass">Пароль</label>
-    <input class="form__field" id="field-pass" type="password" name="field-pass" placeholder="********"
+    <input class="form__field" id="field-pass" type="password" name="field-pass" placeholder="••••••••"
            autocomplete="off" required>
 
     <label class="form__label" for="field-pass-repeat">Повторите пароль</label>
-    <input class="form__field" id="field-pass-repeat" type="password" name="field-pass-repeat" placeholder="********"
+    <input class="form__field" id="field-pass-repeat" type="password" name="field-pass-repeat" placeholder="••••••••"
            autocomplete="off" required>
 
     <fieldset class="form__group form__group--type">
@@ -81,6 +81,13 @@
             <input class="control__input visually-hidden" type="radio" name="product-group" value="common-user">
             <span class="control__mark control__mark--radio"></span>
             Пользователь
+          </label>
+        </li>
+        <li class="form__item">
+          <label class="form__control form__control--radio control">
+            <input class="control__input visually-hidden" type="radio" name="product-group" value="professor">
+            <span class="control__mark control__mark--radio"></span>
+            Преподаватель
           </label>
         </li>
       </ul>

@@ -1,10 +1,140 @@
-@use "./common/forwarded.scss" as f;
+@use "../../common/forwarded.scss" as f;
 
 .news {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 35px;
-  padding: 0;
-  width: 100%;
   box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  color: f.$color-text-second;
+}
+
+.news__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.news__title {
+  width: 260px;
+  margin: 0 auto 19px;
+  font-size: 22px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.news__buttons-list {
+  width: 260px;
+  list-style-type: none;
+  margin: 0 0 57px;
+  padding: 0;
+}
+
+.news__buttons-button {
+  position: relative;
+  width: 260px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+  height: 42px;
+  text-transform: uppercase;
+  color: inherit;
+  font-size: 18px;
+  font-weight: bold;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+
+  &.news__buttons-button--additional {
+    border-top: 1px solid f.$color-text-second;
+    border-radius: 0 0 15px 15px;
+
+    &:after {
+      position: absolute;
+      content: '';
+      width: 25px;
+      height: 20px;
+      right: 60px;
+      background-image: url("/img/arrow.svg");
+    }
+  }
+}
+
+.news__list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: f.$color-background-second;
+}
+
+.news__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  margin: 0 auto 25px;
+  padding-bottom: 16px;
+  background-color: f.$color-accent;
+  border-radius: 15px;
+}
+
+.news__item:first-child {
+  margin-top: -17px;
+}
+
+.news__item:last-child {
+  margin: 0 auto 98px;
+}
+
+.news__item-title {
+  order: 2;
+  margin: 0 0 20px;
+  padding: 0 25px;
+  font-size: 24px;
+  line-height: 38px;
+  text-align: center;
+}
+
+.news__item-date {
+  position: absolute;
+  margin: 0;
+  font-size: 20px;
+  right: 18px;
+  top: 216px;
+}
+
+.news__item-image {
+  order: 1;
+  border-radius: 15px 15px 0 0;
+  margin-bottom: 60px;
+}
+
+.news__item-subtitle {
+  order: 3;
+  width: 210px;
+  margin: 0 auto 23px;
+  font-size: 16px;
+}
+
+.news__item-link {
+  font-size: 24px;
+  line-height: 38px;
+  text-transform: uppercase;
+  color: inherit;
+  text-align: center;
+  order: 4;
+}
+
+.news__link {
+  position: absolute;
+  bottom: 25px;
+  width: 240px;
+  line-height: 48px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: inherit;
+  background-color: #61e78d;
+  border-radius: 8px;
 }
