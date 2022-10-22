@@ -76,3 +76,37 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+@media (min-width: f.$tablet-width) {
+  .feedback {
+    margin-bottom: 136px;
+    padding: 65px 40px 0;
+  }
+
+  .feedback__title {
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  .feedback__subtitle {
+    font-size: 24px;
+    line-height: 30px
+  }
+
+  .feedback__input {
+    padding: 10px 30px;
+  }
+
+  .feedback__form {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+}
+
+@media (min-width: f.$desktop-width) {
+  .feedback {
+    max-width: f.$desktop-width;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
