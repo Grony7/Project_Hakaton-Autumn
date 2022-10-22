@@ -9,6 +9,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
 }
 
 .main-footer__contact {
@@ -18,4 +21,23 @@
 
 .main-footer__logo-image {
   display: block;
+}
+
+@media (min-width: f.$tablet-width) {
+  .main-footer__wrapper {
+    flex-direction: row;
+    padding: 6px 40px;
+  }
+
+  .main-footer{
+    background-color: f.$color-accent;
+  }
+}
+
+@media (min-width: f.$desktop-width) {
+  .main-footer__wrapper {
+    max-width: f.$desktop-width;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }

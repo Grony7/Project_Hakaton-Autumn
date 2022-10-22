@@ -49,3 +49,24 @@
     margin-right: 10px;
   }
 }
+
+@media (min-width: f.$tablet-width) {
+  .contact-list {
+    display: flex;
+    margin-bottom: 0;
+  }
+
+  .contact-list .contact-list__item {
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+
+    &:not(:last-child) {
+      margin-right: 46px;
+    }
+  }
+
+  .contact-list__link {
+    background-color: transparent;
+  }
+}
