@@ -1,1 +1,6 @@
-# Project_Hakaton-Autumn
+# Совместный проект «Hackathon-Autumun»
+
+* Front-end: [Fleodrin](https://github.com/Fleodrin), [Grony7](https://github.com/Grony7).
+* Back-end: []().
+
+---
