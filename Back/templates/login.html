@@ -24,12 +24,12 @@
             </a>
           </li>
           <li class="nav-list__item">
-            <a class="nav-list__button" href="/events">
+            <a class="nav-list__button" href="/timetable">
               Расписание
             </a>
           </li>
           <li class="nav-list__item">
-            <a class="nav-list__button" href="/timetable">
+            <a class="nav-list__button" href="/events">
               Мероприятия
             </a>
           </li>
@@ -43,13 +43,25 @@
     </nav>
   </div>
 </header>
-<main class="main-container">
-  <section class="title">
-    <div class="title__wrapper">
-      <h1 class="title__text">Информационный портал вашего вуза</h1>
-    </div>
-  </section>
+
+<main class="page__login login">
+  <h1 class="login__title">Вход</h1>
+  <a class="login__link" href="#">Зарегистрироваться</a>
+
+  <form class="login__form form" name="login" action="userlogin" method="post">
+
+    <label class="form__label" for="field-email">Почта</label>
+    <input class="form__field" id="field-email" type="text" name="field-email" placeholder="example@elpmaxe.com"
+           autocomplete="off" required>
+
+    <label class="form__label" for="field-pass">Пароль</label>
+    <input class="form__field" id="field-pass" type="text" name="field-pass" placeholder="********"
+           autocomplete="off" required>
+
+    <button class="form__button button" type="submit">Войти</button>
+  </form>
 </main>
+
 <footer class="main-footer">
   <div class="main-footer__wrapper">
     <ul class="main-footer__contact contact-list">
