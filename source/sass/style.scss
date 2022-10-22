@@ -6,9 +6,14 @@
 @use "./blocks/header/nav-list.scss";
 
 // Main
-
 @use "./blocks/main/title.scss";
 
 //Footer
 @use "./blocks/footer/main-footer.scss";
 @use "./blocks/footer/contact-list.scss";
+
+
+//Login
+@use "blocks/login/page__login";
+@use "blocks/login/login";
+@use "blocks/login/form";
