@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>University</title>
-    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="../static/css/style.min.css" />
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -12,7 +12,7 @@
         <a class="main-header__logo" href="/"
           ><img
             class="main-header__logo-image"
-            src="img/main-logo.svg"
+            src="../static/img/main-logo.svg"
             width="48"
             height="48"
             alt="Логотип"
@@ -24,13 +24,13 @@
           <div class="main-nav__wrapper">
             <ul class="main-nav__list nav-list">
               <li class="nav-list__item">
-                <a class="nav-list__button" href="#">Новости</a>
+                <a class="nav-list__button" href="/news">Новости</a>
               </li>
               <li class="nav-list__item">
-                <a class="nav-list__button" href="#">Расписание</a>
+                <a class="nav-list__button" href="/timetable">Расписание</a>
               </li>
               <li class="nav-list__item">
-                <a class="nav-list__button" href="#">Мероприятия</a>
+                <a class="nav-list__button" href="/events">Мероприятия</a>
               </li>
               <li class="nav-list__item nav-list__item--right">
                 <a
@@ -47,12 +47,12 @@
     <main class="page__login login">
       <h1 class="login__title">Регистрация</h1>
       <a class="login__link" href="/login">Вход</a>
-      <form class="login__form form" action="#" method="post">
+      <form class="login__form form" action="/newuser" method="post">
         <label class="form__label" for="field-name">ФИО</label>
         <input
           class="form__field"
           id="field-name"
-          type="email"
+          type="text"
           name="field-name"
           placeholder="Иванов Иван Иванович"
           autocomplete="off"
@@ -118,6 +118,18 @@
                 Пользователь</label
               >
             </li>
+            <li class="form__item">
+              <label class="form__control form__control--radio control"
+              ><input
+                class="control__input visually-hidden"
+                type="radio"
+                name="product-group"
+                value="professor"
+              />
+                <span class="control__mark control__mark--radio"></span>
+                Преподаватель</label
+              >
+            </li>
           </ul>
         </fieldset>
         <button class="form__button button" type="submit">Создать</button>
@@ -137,7 +149,7 @@
                 width="16"
                 height="20"
               >
-                <use href="img/sprite.svg#phone-icon"></use></svg
+                <use href="../static/img/sprite.svg#phone-icon"></use></svg
             ></a>
           </li>
           <li class="contact-list__item">
@@ -155,15 +167,15 @@
             ></a>
           </li>
         </ul>
-        <a class="main-footer__logo" href="#"
+        <a class="main-footer__logo" href="/"
           ><img
             class="main-footer__logo-image"
-            src="img/main-logo.svg"
+            src="../static/img/main-logo.svg"
             width="60"
             height="60"
         /></a>
       </div>
     </footer>
-    <script src="js/menu-toggle.js"></script>
+    <script src="../static/js/menu-toggle.js"></script>
   </body>
 </html>
