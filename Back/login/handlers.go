@@ -26,13 +26,26 @@ func UserLogin(w http.ResponseWriter, r *http.Request) {
 	email := r.FormValue("field-email")
 	pass := r.FormValue("field-pass")
 	users := UserLoginDb(email, pass)
-	for _, value := range users {
-		if email == value.Email && pass == value.Password {
-			if value.Role == "student" || value.Role == "common-user" {
-				http.Redirect(w, r, fmt.Sprintf("/user/s/%d", value.UserId), http.StatusSeeOther)
-			} else if value.Role == "professor" {
-				http.Redirect(w, r, fmt.Sprintf("/user/p/%d", value.UserId), http.StatusSeeOther)
+	fmt.Println(users)
+	if len(users) != 0 {
+		for _, value := range users {
+			if email == value.Email && pass == value.Password {
+				if value.Role == "student" || value.Role == "common-user" {
+					http.Redirect(w, r, fmt.Sprintf("/student/%d", value.UserId), http.StatusSeeOther)
+				} else if value.Role == "professor" {
+					http.Redirect(w, r, fmt.Sprintf("/prof/%d", value.UserId), http.StatusSeeOther)
+				}
 			}
 		}
+	} else {
+		http.Redirect(w, r, "/log_err", http.StatusSeeOther)
 	}
+}
+
+func LogErr(w http.ResponseWriter, r *http.Request) {
+	temp, err := template.ParseFiles("./templates/reg-error.html")
+	if err != nil {
+		log.Fatal(err)
+	}
+	temp.Execute(w, nil)
 }

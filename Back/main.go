@@ -1,6 +1,7 @@
 package main
 
 import (
+	"./admin"
 	"./index"
 	"./login"
 	"./reg"
@@ -18,9 +19,9 @@ func handleFunc() {
 	rtr.HandleFunc("/registration", reg.RegPage)
 	rtr.HandleFunc("/newuser", reg.Reg)
 	rtr.HandleFunc("/reg_err", reg.RegErr)
-	rtr.HandleFunc("/user/s/{id:[0-9]+}", user_page.UserSPage)
-	rtr.HandleFunc("/user/p/{id:[0-9]+}", user_page.UserPPage)
-
+	rtr.HandleFunc("/student/{id:[0-9]+}", user_page.UserSPage)
+	rtr.HandleFunc("/prof/{id:[0-9]+}", user_page.UserPPage)
+	rtr.HandleFunc("/admin", admin.AdminPage)
 	http.Handle("/", rtr)
 	http.ListenAndServe(":8080", nil)
 }
