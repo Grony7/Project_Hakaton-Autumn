@@ -1,6 +1,7 @@
 package reg
 
 import (
+	"fmt"
 	"html/template"
 	"log"
 	"math/rand"
@@ -44,6 +45,12 @@ func Reg(w http.ResponseWriter, r *http.Request) {
 			Role:     r.FormValue("product-group"),
 		}
 		NewUserFunc(newUser.UserId, newUser.Name, newUser.Email, newUser.Password, newUser.Role)
+		if newUser.Role == "professor" {
+			http.Redirect(w, r, fmt.Sprintf("/user/p/%d", newUser.UserId), http.StatusSeeOther)
+		} else if newUser.Role == "student" {
+			http.Redirect(w, r, fmt.Sprintf("/user/s/%d", newUser.UserId), http.StatusSeeOther)
+		}
+
 	} else {
 		http.Redirect(w, r, "/reg_err", http.StatusSeeOther)
 	}

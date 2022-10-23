@@ -7,7 +7,7 @@ import (
 )
 
 func UserSPage(w http.ResponseWriter, r *http.Request) {
-	temp, err := template.ParseFiles("./templates/index-exit.html")
+	temp, err := template.ParseFiles("./templates/index-s.html")
 	if err != nil {
 		log.Fatal(err)
 	}
