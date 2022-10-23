@@ -8,6 +8,7 @@
 // Main
 @use "./blocks/main/title.scss";
 @use "./blocks/main/feedback.scss";
+@use "./blocks/main/news";
 
 //Footer
 @use "./blocks/footer/main-footer.scss";
@@ -21,3 +22,23 @@
 
 //Reg
 @use "blocks/login/control";
+
+//Adnin
+@use "blocks/admin/admin.scss";
+@use "blocks/admin/new-post.scss";
+
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/georgia.woff2") format("woff2"), url("../fonts/georgia.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/georgia-bold.woff2") format("woff2"), url("../fonts/georgia-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

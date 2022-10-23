@@ -1,4 +1,5 @@
 package reg
+<<<<<<< HEAD
 
 import (
   "database/sql"
@@ -25,3 +26,5 @@ func NewUserFunc(user_id int, name string, email string, password string, role s
   defer insert.Close()
 
 }
+=======
+>>>>>>> 92f15a8a728155e35d7c678b80eb2c4716ffa2b7

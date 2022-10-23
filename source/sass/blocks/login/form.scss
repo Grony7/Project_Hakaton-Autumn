@@ -35,6 +35,7 @@
 }
 
 .form__field::placeholder {
+  font-family: "Georgia", "Arial", sans-serif;
   font-size: 18px;
   line-height: 22px;
   color: #000000;
@@ -82,4 +83,10 @@
   width: 240px;
   height: 56px;
 }
+
+.form__text-error {
+  text-align: center;
+  color: #ff0023;
+}
+
 

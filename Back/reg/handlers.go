@@ -3,16 +3,26 @@ package reg
 import (
 	"html/template"
 	"log"
-	"math/rand"
 	"net/http"
 )
 
+<<<<<<< HEAD
 type NewUser struct {
 	UserId   int    `json:"userId"`
 	Name     string `json:"name"`
 	Email    string `json:"email"`
 	Password string `json:"password"`
 	Role     string `json:"role"`
+=======
+type User struct {
+	Id       int
+	UserId   int
+	Name     string
+	Username string
+	Email    string
+	Password string
+	Role     string
+>>>>>>> 92f15a8a728155e35d7c678b80eb2c4716ffa2b7
 }
 
 func RegPage(w http.ResponseWriter, r *http.Request) {
@@ -22,42 +32,4 @@ func RegPage(w http.ResponseWriter, r *http.Request) {
 	}
 
 	temp.Execute(w, nil)
-}
-
-func Reg(w http.ResponseWriter, r *http.Request) {
-	userId := rand.Intn(999999)
-	pass1 := r.FormValue("field-pass")
-	pass2 := r.FormValue("field-pass-repeat")
-
-	if pass1 == pass2 {
-		newUser := NewUser{
-			UserId:   userId,
-			Name:     r.FormValue("field-name"),
-			Email:    r.FormValue("field-email"),
-			Password: r.FormValue("field-pass"),
-			Role:     r.FormValue("product-group"),
-		}
-		NewUserFunc(newUser.UserId, newUser.Name, newUser.Email, newUser.Password, newUser.Role)
-	} else {
-		http.Redirect(w, r, "/registrationerr", http.StatusSeeOther)
-	}
-}
-
-func RegErr(w http.ResponseWriter, r *http.Request) {
-	userId := rand.Intn(999999)
-	pass1 := r.FormValue("field-pass")
-	pass2 := r.FormValue("field-pass-repeat")
-
-	if pass1 == pass2 {
-		newUser := NewUser{
-			UserId:   userId,
-			Name:     r.FormValue("field-name"),
-			Email:    r.FormValue("field-email"),
-			Password: r.FormValue("field-pass"),
-			Role:     r.FormValue("product-group"),
-		}
-		NewUserFunc(newUser.UserId, newUser.Name, newUser.Email, newUser.Password, newUser.Role)
-	} else {
-		http.Redirect(w, r, "/registrationerr", http.StatusSeeOther)
-	}
 }
