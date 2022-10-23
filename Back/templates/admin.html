@@ -17,10 +17,10 @@
       <h1 class="visually-hidden">Админ панель</h1>
       <section class="new-post admin-section">
         <h2 class="new-post__title">Создать новый пост</h2>
-        <form class="new-post__form" name="new-post" metod="post">
+        <form class="new-post__form" name="new-post" method="post">
           <ul class="new-post__list">
             <li class="new-post__item">
-              <label class="new-post__label" for="post-title">Заголовок</label>
+              <label class="new-post__label" for="feedback-mail">Заголовок</label>
               <input
                 class="new-post__input"
                 type="text"
@@ -31,7 +31,18 @@
               />
             </li>
             <li class="new-post__item">
-              <label class="new-post__label" for="post-message">Текст</label>
+              <label class="new-post__label" for="feedback-subtitle">Краткое описание</label>
+              <textarea
+                class="new-post__input new-post__input--message"
+                type="text"
+                name="feedback-subtitle"
+                id="feedback-subtitle"
+                placeholder="Текст поста"
+                required
+              ></textarea>
+            </li>
+            <li class="new-post__item">
+              <label class="new-post__label" for="feedback-message">Текст</label>
               <textarea
                 class="new-post__input new-post__input--message"
                 type="text"
@@ -58,16 +69,6 @@
             Создать пост
           </button>
         </form>
-      </section>
-      <section class="users admin-section">
-        <h2 class="users__title">Список пользователей</h2>
-        <ul class="users__list">
-          <li class="users__item">
-            <p class="users__item-name"><b>ФИО</b></p>
-            <p class="users__item-mail"><b>Email</b></p>
-            <p class="users__item-mail"><b>Роль</b></p>
-          </li>
-        </ul>
       </section>
     </main>
   </body>

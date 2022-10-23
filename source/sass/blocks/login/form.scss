@@ -31,11 +31,12 @@
   max-width: 650px;
   height: 58px;
   border-radius: 8px;
+  font-size: 18px;
   border: none;
 }
 
 .form__field::placeholder {
-  font-family: "Georgia", "Arial", sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   font-size: 18px;
   line-height: 22px;
   color: #000000;

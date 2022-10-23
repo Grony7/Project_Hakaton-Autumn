@@ -1,8 +1,24 @@
 @use "./common/forwarded.scss" as f;
 
+@font-face {
+  font-family: "Helvetica";
+  src: url("../fonts/Helvetica.woff2") format("woff2"), url("../fonts/Helvetica.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("../fonts/Helvetica-Bold.woff2") format("woff2"), url("../fonts/Helvetica-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 .page {
   height: 100%;
-  font-family: "Georgia", "Arial", sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 .page__body {
@@ -32,7 +48,7 @@
   line-height: 37px;
   color: f.$color-text-second;
   background-color: f.$color-accent;
-  font-family: "Georgia", "Arial", sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   border: none;
   border-radius: 8px;
   cursor: pointer;
