@@ -8,11 +8,11 @@ import (
 )
 
 type NewUser struct {
-	UserId   int
-	Name     string
-	Email    string
-	Password string
-	Role     string
+	UserId   int    `json:"userId"`
+	Name     string `json:"name"`
+	Email    string `json:"email"`
+	Password string `json:"password"`
+	Role     string `json:"role"`
 }
 
 func RegPage(w http.ResponseWriter, r *http.Request) {
