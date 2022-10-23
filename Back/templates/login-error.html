@@ -45,19 +45,9 @@
       </div>
     </header>
     <main class="page__login login">
-      <h1 class="login__title">Регистрация</h1>
-      <a class="login__link" href="/login">Вход</a>
-      <form class="login__form form" action="#" method="post">
-        <label class="form__label" for="field-name">ФИО</label>
-        <input
-          class="form__field"
-          id="field-name"
-          type="email"
-          name="field-name"
-          placeholder="Иванов Иван Иванович"
-          autocomplete="off"
-          required
-        />
+      <h1 class="login__title">Вход</h1>
+      <a class="login__link" href="/registration">Зарегистрироваться</a>
+      <form class="login__form form" action="/userlogin" method="post">
         <label class="form__label" for="field-email">Почта</label>
         <input
           class="form__field"
@@ -78,60 +68,6 @@
           autocomplete="off"
           required
         />
-        <label class="form__label" for="field-pass-repeat"
-          >Повторите пароль</label
-        >
-        <input
-          class="form__field"
-          id="field-pass-repeat"
-          type="password"
-          name="field-pass-repeat"
-          placeholder="••••••••"
-          autocomplete="off"
-          required
-        />
-        <fieldset class="form__group form__group--type">
-          <legend class="form__name form__name--type">Кто вы?</legend>
-          <ul class="form__list">
-            <li class="form__item">
-              <label class="form__control form__control--radio control"
-                ><input
-                  class="control__input visually-hidden"
-                  type="radio"
-                  name="product-group"
-                  value="student"
-                  checked="checked"
-                />
-                <span class="control__mark control__mark--radio"></span>
-                Студент</label
-              >
-            </li>
-            <li class="form__item">
-              <label class="form__control form__control--radio control"
-                ><input
-                  class="control__input visually-hidden"
-                  type="radio"
-                  name="product-group"
-                  value="common-user"
-                />
-                <span class="control__mark control__mark--radio"></span>
-                Пользователь</label
-              >
-            </li>
-            <li class="form__item">
-              <label class="form__control form__control--radio control"
-                ><input
-                  class="control__input visually-hidden"
-                  type="radio"
-                  name="product-group"
-                  value="professor"
-                />
-                <span class="control__mark control__mark--radio"></span>
-                Преподаватель</label
-              >
-            </li>
-          </ul>
-        </fieldset>
         <button class="form__button button" type="submit">Создать</button>
         <p class="form__text-error">*Введёна неверная почта или пароль</p>
       </form>
