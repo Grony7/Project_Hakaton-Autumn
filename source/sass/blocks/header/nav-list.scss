@@ -37,19 +37,6 @@
     border-bottom: none;
   }
 
-  .nav-list__item:last-child {
-    .nav-list__button {
-      border-radius: 0;
-    }
-  }
-
-  .nav-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 40px
-  }
-
   .nav-list__item {
     margin-bottom: 0;
 
@@ -60,8 +47,21 @@
     .nav-list__button--enter {
       background-color: f.$color-background-second;
       padding: 14px 6px 11px;
-      border-radius: 8px !important;
+      border-radius: 8px;
     }
+
+    &:last-child {
+      .nav-list__button {
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px
   }
 }
 

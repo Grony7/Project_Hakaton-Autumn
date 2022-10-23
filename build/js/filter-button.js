@@ -1,1 +1,0 @@
-const button=document.querySelector(".news__buttons-button--toggle"),textFirst="Горячие",textSecond="Холодные";button.onclick=t=>{t.preventDefault(),"Горячие"===button.textContent?button.textContent="Холодные":button.textContent="Горячие"};
