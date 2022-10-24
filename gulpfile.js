@@ -26,7 +26,7 @@ export const styles = () => {
     ]))
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/static/css', {sourcemaps: '.'}))
-    .pipe(browser.stream());
+    // .pipe(browser.stream());
 }
 
 // HTML
@@ -116,17 +116,17 @@ const clean = () => {
 
 // Server
 
-const server = (done) => {
-  browser.init({
-    server: {
-      baseDir: 'build'
-    },
-    cors: true,
-    notify: false,
-    ui: false,
-  });
-  done();
-}
+// const server = (done) => {
+//   browser.init({
+//     server: {
+//       baseDir: 'build'
+//     },
+//     cors: true,
+//     notify: false,
+//     ui: false,
+//   });
+//   done();
+// }
 
 //Reload
 
@@ -137,10 +137,10 @@ const reload = (done) => {
 
 // Watcher
 
-const watcher = () => {
+export const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/js/*.js', gulp.series(scripts));
-  gulp.watch('source/*.html', gulp.series(html, reload));
+  gulp.watch('source/*.html', gulp.series(html));
 }
 
 //Build
@@ -175,8 +175,7 @@ export default gulp.series(
     sprite,
     createWebp
   ),
-  gulp.series(
-    server,
-    watcher
-  )
+  // gulp.series(
+  //   watcher
+  // )
 );
