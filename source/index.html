@@ -20,14 +20,17 @@
       </ul>
 
       <ul class="news__list">
-        <li class="news__item">
-          <h3 class="news__item-title">Письма декану</h3>
-          <p class="news__item-date">21.10.22</p>
-          <img class="news__item-image" src='{% static "img/background/director.jpg" %}' alt="Ректор" width="260"
+        {% for i in news %}
+          <li class="news__item">
+          <h3 class="news__item-title">{{ i.title }}</h3>
+          <p class="news__item-date">{{ i.date}}</p>
+          <img class="news__item-image" src='{{ i.image.url }}' alt="Ректор" width="260"
                height="195">
-          <p class="news__item-subtitle">Мы собрали для вас лучшие письма к декану. Спешите прочитать!</p>
+          <p class="news__item-subtitle">{{ i.preview }}</p>
           <a class="news__item-link" href="#">Читать</a>
         </li>
+        {% endfor %}
+
         <li class="news__item">
           <h3 class="news__item-title">Зачёты сдаются</h3>
           <p class="news__item-date">17.10.22</p>
@@ -81,7 +84,7 @@
   </section>
 </main>
 
-<script src='{% static "js/main.js" %}' type="module"></script>
+
 {% endblock %}
 {% block pop_up %}
   {% include 'popup-login.html' %}

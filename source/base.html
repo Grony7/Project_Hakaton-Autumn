@@ -26,17 +26,17 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list nav-list">
           <li class="nav-list__item">
-            <a class="nav-list__button" href="#">
+            <a class="nav-list__button" href="{% url 'news' %}">
               Новости
             </a>
           </li>
           <li class="nav-list__item">
-            <a class="nav-list__button" href="#">
+            <a class="nav-list__button" href="{% url 'calendar' %}">
               Расписание
             </a>
           </li>
           <li class="nav-list__item">
-            <a class="nav-list__button" href="#">
+            <a class="nav-list__button" href="{% url 'events' %}">
               Мероприятия
             </a>
           </li>
@@ -77,12 +77,13 @@
       </li>
     </ul>
     <a class="main-footer__logo" href="#">
-        <use class="main-footer__logo-image" src="{%static 'img/main-logo.svg'  %}" width="60" height="60"></use>
+        <use class="main-footer__logo-image"  src="{%static 'img/main-logo.svg'  %}" width="60" height="60"></use>
     </a>
   </div>
 </footer>
 {% block pop_up %}
 {% endblock %}
+<script src='{% static "js/main.js" %}' type="module"></script>
 </body>
 </html>
 
