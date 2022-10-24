@@ -13,7 +13,7 @@ def index(request):
     add_feedback(name, email, message)
     message='От: '+name+'\n'+message+'\n'+'Почта для связи: '+email
     send_mail(subject='От: '+name, message=message,
-              from_email='rector.site@gmail.com',
+              from_email='loxigl@sandboxc1f4b2f14c544b6b8cbf621a0fde9dad.mailgun.org',
               recipient_list=['rector.site@gmail.com'])
   return render(request, 'index.html')
 
