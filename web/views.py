@@ -1,3 +1,4 @@
+from django.core.mail import send_mail
 from django.shortcuts import render
 from .models import User, add_user, add_feedback
 
@@ -10,6 +11,9 @@ def index(request):
   message = request.POST.get('feedback-message')
   if request.method == 'POST' and name is not None:
     add_feedback(name, email, message)
+    send_mail(subject='Ректору', message=message,
+              from_email='rector.site@gmail.com',
+              recipient_list=[email])
   return render(request, 'index.html')
 
 

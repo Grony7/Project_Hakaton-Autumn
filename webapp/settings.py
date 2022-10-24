@@ -14,6 +14,8 @@ from pathlib import Path
 import mimetypes
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+from django.template.backends import django
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 mimetypes.add_type("image/svg+xml", ".svg", True)
 mimetypes.add_type("image/svg+xml", ".svgz", True)
@@ -130,3 +132,8 @@ STATIC_ROOT = os.path.join(BASE_DIR / 'build/static')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'rector.site@gmail.com'
+EMAIL_HOST_PASSWORD = 'evtqitvchjdedzil'
+EMAIL_USE_TLS = True
