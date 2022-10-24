@@ -5,22 +5,24 @@ from .models import User, add_user, add_feedback, upload_news, News
 
 # Create your views here.
 
-def index(request):
+def index(request, contexts=None, ):
+  if contexts is None:
+    contexts = {'none': 1}
   name = request.POST.get('feedback-name')
   email = request.POST.get('feedback-mail')
   message = request.POST.get('feedback-message')
-  news = News.objects.all()
-  news_count = news.count()
+  news = News.objects.all().order_by('-public_date')
   context = {
     'news': news,
-    'news_count': news_count
   }
+  context.update(contexts)
   if request.method == 'POST' and name is not None:
     add_feedback(name, email, message)
     message = 'От: ' + name + '\n' + message + '\n' + 'Почта для связи: ' + email
     send_mail(subject='От: ' + name, message=message,
               from_email='loxigl@sandboxc1f4b2f14c544b6b8cbf621a0fde9dad.mailgun.org',
               recipient_list=['rector.site@gmail.com'])
+    context = {'result': 2}
   return render(request, 'index.html', context)
 
 
@@ -60,7 +62,7 @@ def login(request):
     'result': result
   }
   if result == 1:
-    return render(request, 'index.html', context)
+    return index(request, context)
   else:
     return render(request, 'login.html', context)
 

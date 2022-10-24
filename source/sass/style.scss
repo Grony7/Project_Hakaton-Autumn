@@ -19,12 +19,14 @@
 @use "blocks/login/login";
 @use "blocks/login/form";
 
-//Popup-login
-@use "blocks/popup/popup-login";
-
 //Reg
 @use "blocks/login/control";
 
 //Admin
 @use "blocks/admin/admin.scss";
 @use "blocks/admin/new-post.scss";
+
+// Popup
+@use "./blocks/popup/popup-provost.scss";
+@use "blocks/popup/popup-login";
+@use "./blocks/popup/popup.scss";

@@ -52,7 +52,7 @@ class News(models.Model):
   main_text = models.CharField(max_length=10000)
   preview = models.CharField(max_length=150)
   public_date = models.DateField(null=True)
-  image = models.ImageField(upload_to='files/', blank=True)
+  image = models.ImageField(upload_to='files/', blank=True, null=True)
 
   def __str__(self):
     return self.title

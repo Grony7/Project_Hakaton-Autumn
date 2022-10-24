@@ -23,7 +23,7 @@
         {% for i in news %}
           <li class="news__item">
           <h3 class="news__item-title">{{ i.title }}</h3>
-          <p class="news__item-date">{{ i.public_date}}</p>
+          <p class="news__item-date">{{ i.public_date|date:'j.m.y'}}</p>
           <img class="news__item-image" src='{{ i.image.url }}' alt="Ректор" width="260"
                height="195">
           <p class="news__item-subtitle">{{ i.preview }}</p>
@@ -64,8 +64,11 @@
       </div>
     </section>
   </main>
-
-  <script src='{% static "js/main.js" %}' type="module"></script>
+  <div class="popup-provost popup--close">
+      <h2 class="visually-hidden">Модальное окно</h2>
+      <p class="popup-provost__text">Письмо успешно отправлено</p>
+      <button class="popup-provost__button"><span class="visually-hidden">Закрыть окно</span></button>
+  </div>
 {% endblock %}
 {% block pop_up %}
   {% include 'popup-login.html' %}
