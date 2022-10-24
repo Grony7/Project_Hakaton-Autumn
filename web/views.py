@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from .models import User, add_user, add_feedback
-from .forms import LoginForm
 
 
 # Create your views here.

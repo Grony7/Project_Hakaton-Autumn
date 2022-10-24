@@ -25,5 +25,5 @@ urlpatterns = [
   path('', RedirectView.as_view(url='/general/', permanent=False)),
   path('register/', views.register, name='register'),
   path('login/', views.login, name='login'),
-  path("__reload__/", include("django_browser_reload.urls")),
+  # path("__reload__/", include("django_browser_reload.urls")),
 ]
