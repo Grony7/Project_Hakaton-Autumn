@@ -87,7 +87,7 @@
           <a class="news__item-link" href="#">Читать</a>
         </li>
         <li class="news__item">
-          <h3 class="news__item-title">Выигрыш в кармане</h3>
+            <h3 class="news__item-title">Выигрыш в кармане</h3>
           <p class="news__item-date">12.10.22</p>
           <img class="news__item-image" src='{% static "img/background/fee.jpg" %}' alt="Космонавты" width="260"
                height="195">
@@ -139,7 +139,7 @@
             +7 (999) 987 65 43-21
           </span>
           <svg class="contact-list__icon contact-list__icon--phone-icon" width="16" height="20">
-            <use href="img/sprite.svg#phone-icon"></use>
+            <use href="{%static 'img/sprite.svg'%}#phone-icon"></use>
           </svg>
         </a>
       </li>
@@ -149,13 +149,13 @@
             university@inheart.ru
           </span>
           <svg class="contact-list__icon contact-list__icon--mail-icon" width="24" height="18">
-            <use href="img/sprite.svg#mail-icon"></use>
+            <use href="{% static 'img/sprite.svg' %}#mail-icon"></use>
           </svg>
         </a>
       </li>
     </ul>
     <a class="main-footer__logo" href="#">
-      <img class="main-footer__logo-image" src="img/main-logo.svg" width="60" height="60">
+      <use class="main-footer__logo-image" src="{%static 'img/main-logo.svg'  %}" width="60" height="60"></use>
     </a>
   </div>
 </footer>
