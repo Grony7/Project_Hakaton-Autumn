@@ -11,7 +11,6 @@ import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import del from 'del';
-import browser from 'browser-sync';
 
 // Styles
 
@@ -26,7 +25,6 @@ export const styles = () => {
     ]))
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/static/css', {sourcemaps: '.'}))
-    // .pipe(browser.stream());
 }
 
 // HTML
@@ -90,7 +88,8 @@ const sprite = () => {
 const copy = (done) => {
   gulp.src([
     'source/*.ico',
-    'source/*.webmanifest'
+    'source/*.webmanifest',
+    'source/js/*'
   ], {
     base: 'source'
   })
@@ -114,32 +113,18 @@ const clean = () => {
   return del('build');
 };
 
-// Server
-
-// const server = (done) => {
-//   browser.init({
-//     server: {
-//       baseDir: 'build'
-//     },
-//     cors: true,
-//     notify: false,
-//     ui: false,
-//   });
-//   done();
-// }
-
 //Reload
 
-const reload = (done) => {
-  browser.reload();
-  done();
-}
+// const reload = (done) => {
+//   browser.reload();
+//   done();
+// }
 
 // Watcher
 
 export const watcher = () => {
-  gulp.watch('source/sass/**/*.scss', gulp.series(styles), {delay: 20});
-  gulp.watch('source/js/*.js', gulp.series(scripts));
+  gulp.watch('source/sass/**/*.scss', gulp.series(styles));
+  gulp.watch('source/js/*.js', gulp.series(copy));
   gulp.watch('source/*.html', gulp.series(html));
 }
 
@@ -153,7 +138,7 @@ export const build = gulp.series(
   gulp.parallel(
     styles,
     html,
-    scripts,
+    // scripts,
     svg,
     sprite,
     createWebp
@@ -170,7 +155,7 @@ export default gulp.series(
   gulp.parallel(
     styles,
     html,
-    scripts,
+    // scripts,
     svg,
     sprite,
     createWebp

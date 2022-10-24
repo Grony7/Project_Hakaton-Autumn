@@ -45,3 +45,19 @@ class Feedback(models.Model):
 def add_feedback(name, email, text):
   record = Feedback(name=name, email=email, text=text)
   record.save()
+
+
+class News(models.Model):
+  title = models.CharField(max_length=200)
+  main_text = models.CharField(max_length=10000)
+  preview = models.CharField(max_length=150)
+  public_date = models.DateField(null=True)
+  image = models.ImageField(upload_to='files/', blank=True)
+
+  def __str__(self):
+    return self.title
+
+
+def upload_news(title, main_text, preview, public_date, image):
+  record = News(title, main_text, preview, public_date, image)
+  record.save()
