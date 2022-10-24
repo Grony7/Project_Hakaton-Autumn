@@ -17,6 +17,7 @@ import mimetypes
 from django.template.backends import django
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+mimetypes.add_type("text/css", ".css", True)
 mimetypes.add_type("image/svg+xml", ".svg", True)
 mimetypes.add_type("image/svg+xml", ".svgz", True)
 
@@ -64,7 +65,7 @@ TEMPLATES = [
   {
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
     'DIRS': [BASE_DIR / 'build/template',
-             BASE_DIR/ 'source/templates',
+             BASE_DIR / 'source/templates',
 
              ]
     ,
@@ -126,7 +127,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
-
+MEDIA_ROOT = os.path.join(BASE_DIR / 'media')
+MEDIA_URL = '/media/'
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR / 'build/static')
 

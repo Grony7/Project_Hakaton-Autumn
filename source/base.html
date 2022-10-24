@@ -18,7 +18,7 @@
 
 <header class="main-header">
   <div class="main-header__wrapper">
-    <a class="main-header__logo" href="{% url 'general' %}">
+    <a class="main-header__logo" href="{%url 'general' %}">
       <img class="main-header__logo-image" src='{% static "img/main-logo.svg" %}' width="48" height="48" alt="Логотип">
     </a>
     <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -26,17 +26,17 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list nav-list">
           <li class="nav-list__item">
-            <a class="nav-list__button" href="#">
+            <a class="nav-list__button" href="{% url 'news' %}">
               Новости
             </a>
           </li>
           <li class="nav-list__item">
-            <a class="nav-list__button" href="#">
+            <a class="nav-list__button" href="{% url 'calendar' %}">
               Расписание
             </a>
           </li>
           <li class="nav-list__item">
-            <a class="nav-list__button" href="#">
+            <a class="nav-list__button" href="{% url 'events' %}">
               Мероприятия
             </a>
           </li>
@@ -61,7 +61,7 @@
             +7 (999) 987 65 43-21
           </span>
           <svg class="contact-list__icon contact-list__icon--phone-icon" width="16" height="20">
-            <use href="{% static 'img/sprite.svg' %}#phone-icon"></use>
+            <use href="{%static 'img/sprite.svg'%}#phone-icon"></use>
           </svg>
         </a>
       </li>
@@ -77,12 +77,13 @@
       </li>
     </ul>
     <a class="main-footer__logo" href="#">
-      <use class="main-footer__logo-image" src="{% static 'img/main-logo.svg' %}" width="60" height="60"></use>
+        <use class="main-footer__logo-image"  src="{%static 'img/main-logo.svg'  %}" width="60" height="60"></use>
     </a>
   </div>
 </footer>
 {% block pop_up %}
 {% endblock %}
+<script src='{% static "js/main.js" %}' type="module"></script>
 </body>
 </html>
 

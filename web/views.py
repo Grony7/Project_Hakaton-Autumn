@@ -1,6 +1,6 @@
 from django.core.mail import send_mail
 from django.shortcuts import render
-from .models import User, add_user, add_feedback
+from .models import User, add_user, add_feedback, upload_news, News
 
 
 # Create your views here.
@@ -9,13 +9,19 @@ def index(request):
   name = request.POST.get('feedback-name')
   email = request.POST.get('feedback-mail')
   message = request.POST.get('feedback-message')
+  news = News.objects.all()
+  news_count = news.count()
+  context = {
+    'news': news,
+    'news_count': news_count
+  }
   if request.method == 'POST' and name is not None:
     add_feedback(name, email, message)
-    message='От: '+name+'\n'+message+'\n'+'Почта для связи: '+email
-    send_mail(subject='От: '+name, message=message,
+    message = 'От: ' + name + '\n' + message + '\n' + 'Почта для связи: ' + email
+    send_mail(subject='От: ' + name, message=message,
               from_email='loxigl@sandboxc1f4b2f14c544b6b8cbf621a0fde9dad.mailgun.org',
               recipient_list=['rector.site@gmail.com'])
-  return render(request, 'index.html')
+  return render(request, 'index.html', context)
 
 
 def register(request):
@@ -57,3 +63,15 @@ def login(request):
     return render(request, 'index.html', context)
   else:
     return render(request, 'login.html', context)
+
+
+def news(request):
+  return 0
+
+
+def calendar(request):
+  return 0
+
+
+def events(request):
+  return 0
