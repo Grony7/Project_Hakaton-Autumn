@@ -1,15 +1,33 @@
 @use "../../common/forwarded.scss" as f;
 
 .popup-login {
+  display: flex;
+  justify-content: center;
   position: fixed;
   box-sizing: border-box;
-  display: flex;
-  left: -50%;
+  right: 50%;
+  bottom: 70px;
   transform: translateX(50%);
-  width: 1200px;
-  height: 54px;
+  width: calc(100% - 90px);
+  padding: 20px;
+  max-width: 980px;
+  min-width: 260px;
+  max-height: 80px;
+  border-radius: 15px;
+  align-items: center;
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   background-color: f.$color-background-first;
   border: 2px solid f.$color-accent;
+  transition: 150ms;
+
+  &:hover {
+    background-color: #E0E0E0;
+    user-select: none;
+  }
+
+  @media (max-width: f.$mobile-width) {
+    max-width: 260px;
+    max-height: 80px;
+  }
 }

@@ -39,11 +39,11 @@ const html = () => {
 
 //Scripts
 
-const scripts = () => {
-  return gulp.src('source/js/*.js')
-    .pipe(terser())
-    .pipe(gulp.dest('build/static/js'));
-}
+// const scripts = () => {
+//   return gulp.src('source/js/*.js')
+//     .pipe(terser())
+//     .pipe(gulp.dest('build/static/js'));
+// }
 
 //Images
 
@@ -90,7 +90,8 @@ const sprite = () => {
 const copy = (done) => {
   gulp.src([
     'source/*.ico',
-    'source/*.webmanifest'
+    'source/*.webmanifest',
+    'source/js/*'
   ], {
     base: 'source'
   })
@@ -139,7 +140,7 @@ const reload = (done) => {
 
 export const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles), {delay: 20});
-  gulp.watch('source/js/*.js', gulp.series(scripts));
+  gulp.watch('source/js/*.js', gulp.series(copy));
   gulp.watch('source/*.html', gulp.series(html));
 }
 
@@ -153,7 +154,7 @@ export const build = gulp.series(
   gulp.parallel(
     styles,
     html,
-    scripts,
+    // scripts,
     svg,
     sprite,
     createWebp
@@ -170,7 +171,7 @@ export default gulp.series(
   gulp.parallel(
     styles,
     html,
-    scripts,
+    // scripts,
     svg,
     sprite,
     createWebp
