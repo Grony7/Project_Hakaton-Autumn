@@ -21,5 +21,7 @@ def login(request):
   name=request.POST.get('field-name')
   email=request.POST.get('field-email')
   password=request.POST.get('field-pass')
-
+  who=request.POST.get('product-group')
+  if request.method=='POST' and name is not None:
+    add_user(name,email,password,who)
   return render(request, 'register.html')
