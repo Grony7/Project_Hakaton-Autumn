@@ -11,9 +11,10 @@ def index(request):
   message = request.POST.get('feedback-message')
   if request.method == 'POST' and name is not None:
     add_feedback(name, email, message)
-    send_mail(subject='Ректору', message=message,
+    message='От: '+name+'\n'+message+'\n'+'Почта для связи: '+email
+    send_mail(subject='От: '+name, message=message,
               from_email='rector.site@gmail.com',
-              recipient_list=[email])
+              recipient_list=['rector.site@gmail.com'])
   return render(request, 'index.html')
 
 
