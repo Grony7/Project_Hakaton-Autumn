@@ -25,14 +25,13 @@ mimetypes.add_type("image/svg+xml", ".svgz", True)
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-&!)dmjs9)=yq-e6n_h_u)s1nimtqauks@=4#kl$^mu%j30a&^s')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', False))
 
 ALLOWED_HOSTS = [
   '127.0.0.1',
   'hackathon-autumun.herokuapp.com'
 ]
-LIVERELOAD_HOST = '127.0.0.1'
-LIVERELOAD_PORT = '8000'
+
 # Application definition
 
 INSTALLED_APPS = [
