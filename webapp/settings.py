@@ -84,10 +84,10 @@ WSGI_APPLICATION = 'webapp.wsgi.application'
 
 DATABASES = {
   'default': {'ENGINE': 'django.db.backends.postgresql',
-              'HOST': os.environ.get('POSTGRES_HOST', 'localhost'),
-              'NAME': os.environ.get('POSTGRES_DB', 'hakaton'),
-              'USER': os.environ.get('POSTGRES_USER', 'postgres'),
-              'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'dayzliderkrut'),
+              'HOST': os.environ.get('POSTGRES_HOST', 'ec2-54-160-200-167.compute-1.amazonaws.com'),
+              'NAME': os.environ.get('POSTGRES_DB', 'dbp2fprm2mlte7'),
+              'USER': os.environ.get('POSTGRES_USER', 'nwbzgggruzhrqn'),
+              'PASSWORD': os.environ.get('POSTGRES_PASSWORD', '711e8d846024b575a49bceaec9aecea09d7ccf9b572c40f7866257c5bf9eb159'),
               'PORT': os.environ.get('POSTGRES_PORT', '5432'), },
 }
 

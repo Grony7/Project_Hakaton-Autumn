@@ -5,8 +5,8 @@ from django.urls import path, include
 from django.views.generic import RedirectView
 
 urlpatterns = [
-  path('', views.index, name='index'),
-  path('login', views.login, name='login')
+  path('', views.index, name='general'),
+  path('login/', views.login, name='login')
 
 ]
 

@@ -7,14 +7,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>University</title>
-  <link rel="stylesheet" href="{%static '' %}">
+  <link rel="stylesheet" href="{%static 'css/style.min.css' %}">
 </head>
 
 <body class="page__body">
 <header class="main-header">
   <div class="main-header__wrapper">
-    <a class="main-header__logo" href="index.html">
-      <img class="main-header__logo-image" src="img/main-logo.svg" width="48" height="48" alt="Логотип">
+    <a class="main-header__logo" href="{% url 'general' %}">
+      <img class="main-header__logo-image" src="{% static 'img/main-logo.svg' %}" width="48" height="48" alt="Логотип">
     </a>
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -36,7 +36,7 @@
             </a>
           </li>
           <li class="nav-list__item nav-list__item--right">
-            <a class="nav-list__button nav-list__button--enter" href="../web/templates/login.html">
+            <a class="nav-list__button nav-list__button--enter" href="#">
               Вход
             </a>
           </li>
@@ -48,7 +48,7 @@
 
 <main class="page__login login">
   <h1 class="login__title">Регистрация</h1>
-  <a class="login__link" href="../web/templates/login.html">Вход</a>
+  <a class="login__link" href="#">Вход</a>
 
   <form class="login__form form" action="#" method="post">
     <label class="form__label" for="field-name">ФИО</label>
