@@ -4,12 +4,21 @@ from django.db import models
 from django.urls import reverse
 
 
+class Idk(models.Model):
+  name = models.CharField
+
+
+def add_user(name, email, password, who):
+  record = User(name=name, email=email, password=password, who=who)
+  record.save()
+
+
 class User(models.Model):
   id = models.AutoField(primary_key=True)
   name = models.CharField(max_length=150)
-  email = models.EmailField
-  password = models.CharField
-  who = models.IntegerField
+  email = models.EmailField(max_length=30, null=True)
+  password = models.CharField(max_length=40, null=True)
+  who = models.IntegerField(null=True)
 
   def __str__(self):
     return self.name
@@ -23,10 +32,3 @@ class User(models.Model):
   def get_absolute_url(self):
     return reverse('user', args=[str(self.id)])
 
-
-record = User(name='bruh')
-record.save()
-
-
-class Meta:
-  ordering = ['id']
