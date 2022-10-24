@@ -18,4 +18,8 @@ def index(request):
 
 
 def login(request):
+  name=request.POST.get('field-name')
+  email=request.POST.get('field-email')
+  password=request.POST.get('field-pass')
+
   return render(request, 'register.html')
