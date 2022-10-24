@@ -1,0 +1,15 @@
+@use "../../common/forwarded.scss" as f;
+
+.popup-login {
+  position: fixed;
+  box-sizing: border-box;
+  display: flex;
+  left: -50%;
+  transform: translateX(50%);
+  width: 1200px;
+  height: 54px;
+  text-align: center;
+  font-size: 24px;
+  background-color: f.$color-background-first;
+  border: 2px solid f.$color-accent;
+}
