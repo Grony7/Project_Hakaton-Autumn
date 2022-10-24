@@ -15,8 +15,6 @@ import mimetypes
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-
 mimetypes.add_type("image/svg+xml", ".svg", True)
 mimetypes.add_type("image/svg+xml", ".svgz", True)
 
@@ -27,7 +25,7 @@ mimetypes.add_type("image/svg+xml", ".svgz", True)
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-&!)dmjs9)=yq-e6n_h_u)s1nimtqauks@=4#kl$^mu%j30a&^s')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ.get('DJANGO_DEBUG', False))
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
 ALLOWED_HOSTS = [
   '127.0.0.1',
@@ -42,8 +40,10 @@ INSTALLED_APPS = [
   'django.contrib.contenttypes',
   'django.contrib.sessions',
   'django.contrib.messages',
+  'livereload',
   'django.contrib.staticfiles',
-  'web.apps.WebConfig'
+  'web.apps.WebConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -55,6 +55,8 @@ MIDDLEWARE = [
   'django.contrib.auth.middleware.AuthenticationMiddleware',
   'django.contrib.messages.middleware.MessageMiddleware',
   'django.middleware.clickjacking.XFrameOptionsMiddleware',
+  'livereload.middleware.LiveReloadScript',
+
 ]
 
 ROOT_URLCONF = 'webapp.urls'
@@ -87,7 +89,8 @@ DATABASES = {
               'HOST': os.environ.get('POSTGRES_HOST', 'ec2-54-160-200-167.compute-1.amazonaws.com'),
               'NAME': os.environ.get('POSTGRES_DB', 'dbp2fprm2mlte7'),
               'USER': os.environ.get('POSTGRES_USER', 'nwbzgggruzhrqn'),
-              'PASSWORD': os.environ.get('POSTGRES_PASSWORD', '711e8d846024b575a49bceaec9aecea09d7ccf9b572c40f7866257c5bf9eb159'),
+              'PASSWORD': os.environ.get('POSTGRES_PASSWORD',
+                                         '711e8d846024b575a49bceaec9aecea09d7ccf9b572c40f7866257c5bf9eb159'),
               'PORT': os.environ.get('POSTGRES_PORT', '5432'), },
 }
 
