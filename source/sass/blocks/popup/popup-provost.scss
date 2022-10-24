@@ -1,0 +1,65 @@
+@use "../../common/forwarded.scss" as f;
+
+.popup-provost {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  width: calc(100% - 40px);
+  padding: 16px;
+  transform: translateX(-50%);
+  border-radius: 15px;
+  background-color: f.$color-background-first;
+  border: 2px solid f.$color-accent;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.popup-provost__text {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1;
+  text-align: center;
+}
+
+.popup-provost__button {
+  display: none;
+}
+
+.popup-provost--close {
+  display: none;
+}
+
+@media (min-width: f.$tablet-width) {
+  .popup-provost {
+    top: 80px;
+    bottom: auto;
+    width: calc(100% - 60px);
+    padding: 24px 70px;
+  }
+
+  .popup-provost__button {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    display: block;
+    min-width: 40px;
+    min-height: 40px;
+    background-image: url("../img/close-icon.svg");
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: transparent;
+    border: none;
+    box-sizing: border-box;
+  }
+}
+
+
+@media (min-width: f.$desktop-width) {
+  .popup-provost {
+    width: calc(100% - 180px);
+    max-width: f.$desktop-width - 180px;
+  }
+}

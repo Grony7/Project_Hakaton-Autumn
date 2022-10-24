@@ -7,6 +7,6 @@ if (login.textContent === '1') {
   popup.classList.remove('visually-hidden');
   window.setTimeout(addHidden, 5000);
   function addHidden() {
-    popup.classList.add('visually-hidden');
+    return popup.classList.add('visually-hidden');
   }
 }

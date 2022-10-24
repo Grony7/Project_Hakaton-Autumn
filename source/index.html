@@ -64,8 +64,11 @@
       </div>
     </section>
   </main>
-
-  <script src='{% static "js/main.js" %}' type="module"></script>
+  <div class="popup-provost popup--close">
+      <h2 class="visually-hidden">Модальное окно</h2>
+      <p class="popup-provost__text">Письмо успешно отправлено</p>
+      <button class="popup-provost__button"><span class="visually-hidden">Закрыть окно</span></button>
+  </div>
 {% endblock %}
 {% block pop_up %}
   {% include 'popup-login.html' %}
