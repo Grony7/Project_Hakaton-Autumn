@@ -17,9 +17,10 @@ Including another URLconf
 from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib import admin
+from django.template.defaulttags import url
 from django.urls import path, include
 from django.views.generic import RedirectView
-
+from django.views.static import serve
 from web import views
 
 urlpatterns = [
