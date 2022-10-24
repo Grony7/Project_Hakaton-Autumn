@@ -1,3 +1,4 @@
+from django.core.mail import send_mail
 from django.shortcuts import render
 from .models import User, add_user, add_feedback
 
@@ -10,6 +11,7 @@ def index(request):
   message = request.POST.get('feedback-message')
   if request.method == 'POST' and name is not None:
     add_feedback(name, email, message)
+    send_mail('Ректору', message, 'andrey.khalaimenko@gmail.com', '	faret224@gmail.com')
   return render(request, 'index.html')
 
 
@@ -52,3 +54,6 @@ def login(request):
     return render(request, 'index.html', context)
   else:
     return render(request, 'login.html', context)
+
+def verify(request):
+  return render(request,'verifyforzoho.html')
