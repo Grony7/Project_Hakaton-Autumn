@@ -7,7 +7,6 @@ from django.views.generic import RedirectView
 urlpatterns = [
   path('', views.index, name='general'),
   path('login/', RedirectView.as_view(url='login', permanent=False)),
-  path('zohoverify/verifyforzoho.html',views.verify),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
