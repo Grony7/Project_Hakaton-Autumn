@@ -94,7 +94,7 @@ const copy = (done) => {
   ], {
     base: 'source'
   })
-    .pipe(gulp.dest('build/template'))
+    .pipe(gulp.dest('build/static'))
   done();
 }
 

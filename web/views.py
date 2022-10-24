@@ -15,3 +15,7 @@ def index(request):
 
     add_user(name, email, password, who)
   return render(request, 'index.html')
+
+
+def login(request):
+ return render(request,'index.html')

@@ -57,8 +57,7 @@ ROOT_URLCONF = 'webapp.urls'
 TEMPLATES = [
   {
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
-    'DIRS': [BASE_DIR / 'templates',
-             BASE_DIR/'build'/'template'
+    'DIRS': [BASE_DIR / 'build/template',
              ]
     ,
     'APP_DIRS': True,
@@ -120,7 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR / 'build' / 'static')
+STATIC_ROOT = os.path.join(BASE_DIR / 'build/static')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
