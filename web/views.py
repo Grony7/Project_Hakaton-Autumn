@@ -19,9 +19,9 @@ def index(request, contexts=None, ):
   if request.method == 'POST' and name is not None:
     add_feedback(name, email, message)
     message = 'От: ' + name + '\n' + message + '\n' + 'Почта для связи: ' + email
-    send_mail(subject='От: ' + name, message=message,
-              from_email='loxigl@sandboxc1f4b2f14c544b6b8cbf621a0fde9dad.mailgun.org',
-              recipient_list=['rector.site@gmail.com'])
+    # send_mail(subject='От: ' + name, message=message,
+    #           from_email='loxigl@sandboxc1f4b2f14c544b6b8cbf621a0fde9dad.mailgun.org',
+    #           recipient_list=['rector.site@gmail.com'])
     context = {'result': 2}
   return render(request, 'index.html', context)
 
