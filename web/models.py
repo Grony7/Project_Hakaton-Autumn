@@ -16,9 +16,9 @@ def add_user(name, email, password, who):
 class User(models.Model):
   id = models.AutoField(primary_key=True)
   name = models.CharField(max_length=150)
-  email = models.EmailField(max_length=30, null=True)
-  password = models.CharField(max_length=40, null=True)
-  who = models.IntegerField(null=True)
+  email = models.EmailField(max_length=30)
+  password = models.CharField(max_length=40)
+  who = models.CharField(max_length=20)
 
   def __str__(self):
     return self.name
