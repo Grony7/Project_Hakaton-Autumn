@@ -42,6 +42,7 @@ INSTALLED_APPS = [
   'django.contrib.sessions',
   'django.contrib.messages',
   "django_browser_reload",
+  'django.contrib.staticfiles'
   'web.apps.WebConfig',
 ]
 
