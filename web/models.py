@@ -32,3 +32,16 @@ class User(models.Model):
   def get_absolute_url(self):
     return reverse('user', args=[str(self.id)])
 
+
+class Feedback(models.Model):
+  name = models.CharField(max_length=70)
+  email = models.EmailField(max_length=100, null=True)
+  text = models.CharField(max_length=1000)
+
+  def __str__(self):
+    return self.email
+
+
+def add_feedback(name, email, text):
+  record = Feedback(name=name, email=email, text=text)
+  record.save()
