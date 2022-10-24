@@ -9,6 +9,9 @@
 @use "./blocks/main/feedback.scss";
 @use "./blocks/main/news";
 
+// Popup
+@use "./blocks/popup/popup-provost.scss";
+
 //Footer
 @use "./blocks/footer/main-footer.scss";
 @use "./blocks/footer/contact-list.scss";
