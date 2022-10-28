@@ -32,7 +32,8 @@ DEBUG = bool(os.environ.get('DJANGO_DEBUG', False))
 
 ALLOWED_HOSTS = [
   '127.0.0.1',
-  'hackathon-autumun.herokuapp.com'
+  'hackathon-autumun.herokuapp.com',
+  'app-hachaton.herokuapp.com',
 ]
 
 # Application definition
