@@ -1,5 +1,4 @@
 @use "global.scss";
-
 // Header
 @use "./blocks/header/main-header.scss";
 @use "./blocks/header/main-nav.scss";
@@ -26,3 +25,8 @@
 //Admin
 @use "blocks/admin/admin.scss";
 @use "blocks/admin/new-post.scss";
+
+// Popup
+@use "./blocks/popup/popup-provost.scss";
+@use "blocks/popup/popup-login";
+@use "./blocks/popup/popup.scss";
